@@ -3,7 +3,12 @@
     "target": "ES6",
     "jsx": "preserve",
     "noEmit": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "sourceMap": true
   },
-  "exclude": ["node_modules", "config", "dev_server.js"]
+  "exclude": [
+    "node_modules",
+    "config",
+    "dev_server.js"
+  ]
 }
