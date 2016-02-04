@@ -6,6 +6,6 @@ export interface IToggleAction {
 
 export function Toggle(): IToggleAction {
 	return {
-		type: ACTION.Toggle
+		type: ACTION.Toggle,
 	};
 }

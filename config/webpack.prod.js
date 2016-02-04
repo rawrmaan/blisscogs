@@ -37,7 +37,7 @@ module.exports = {
     })
   ],
   resolve: {
-    root: [path.resolve('../App')],
+    root: [path.resolve('../app')],
     extensions: ['', '.jsx', '.js', '.tsx', '.ts']
   },
   tslint: {
