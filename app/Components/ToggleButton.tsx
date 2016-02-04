@@ -21,11 +21,11 @@ class ToggleButton extends React.Component<IToggleProps, {}> {
 
 		const attrs: any = {
 			style: {
-				color: (isOn) ? 'green' : 'red',
-				fontSize: 40,
 				backgroundColor: 'white',
 				border: '2px solid black',
-			}
+				color: (isOn) ? 'green' : 'red',
+				fontSize: 40,
+			},
 		};
 
 		return (
