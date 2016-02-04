@@ -1,11 +1,14 @@
-import { ACTION } from '../Constants/Actions';
-import { IToggleAction } from '../Actions/aToggle';
+import { ACTIONTYPE } from '../Constants/ActionTypes';
+
+interface IToggleState {
+	isToggled: boolean;
+}
 
 //TODO: Object.assign needs a polyfill
 
-export const Toggle = (state = { isToggled: false }, action): any => {
+export const Toggle = (state = { isToggled: false }, action): IToggleState => {
 	switch (action.type) {
-		case ACTION.Toggle:
+		case ACTIONTYPE.Toggle:
 			//TODO: USe es7 spread when available in typescript
 			//return {
 			//	...state,
@@ -15,4 +18,4 @@ export const Toggle = (state = { isToggled: false }, action): any => {
 		default:
 			return state;
 	}
-}
+};

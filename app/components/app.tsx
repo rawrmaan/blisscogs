@@ -1,14 +1,7 @@
 import * as React from 'react';
-import { connect, Provider } from 'react-redux';
+import { connect } from 'react-redux';
 
-//import { incrementCounter, decrementCounter, addCounter } from '../actions';
-//import CounterList from './counter_list';
-import Body from './Body';
-
-
-interface IAppProps {
-	store: any;
-}
+import ToggleButton from './ToggleButton';
 
 function select(state, props) {
 	return {
@@ -21,7 +14,11 @@ class App extends React.Component<any, {}> {
 	public render(): React.ReactElement<{}> {
 
 		return (
-			<Body/>
+			<div id='body-wrapper'>
+				<h1>React, Redux, Typescript & Webpack Boilerplate</h1>
+				<p>Toggling this button dispatches actions with Redux</p>
+				<ToggleButton/>
+			</div>
 		);
 	}
 }

@@ -1,11 +1,11 @@
-import {ACTION} from '../Constants/Actions';
+import {ACTIONTYPE} from '../Constants/ActionTypes';
 
 export interface IToggleAction {
-	type: ACTION;
+	type: ACTIONTYPE;
 }
 
 export function Toggle(): IToggleAction {
 	return {
-		type: ACTION.Toggle,
+		type: ACTIONTYPE.Toggle
 	};
 }

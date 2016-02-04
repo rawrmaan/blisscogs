@@ -1,7 +1,5 @@
 import * as React from 'react';
-import TouchArea from './TouchArea';
-import WaveformOptionGroup from './WaveformOptionGroup';
-import {waveformOptions} from '../config';
+import ToggleButton from './ToggleButton';
 
 class Body extends React.Component<{}, {}> {
 
@@ -9,19 +7,9 @@ class Body extends React.Component<{}, {}> {
 
 		return (
 			<div id='body-wrapper'>
-				<header className='title'>
-					<h1>Theremin</h1>
-				</header>
-				<section className='oscillator'>
-					<h2>Waveform</h2>
-					<WaveformOptionGroup options={waveformOptions}/>
-				</section>
-				<section className='surface'>
-					<TouchArea></TouchArea>
-				</section>
-				<section className='row'>
-
-				</section>
+				<h1>React, Redux, Typescript & Webpack Boilerplate</h1>
+				<p>Toggling this button dispatches actions with Redux</p>
+				<ToggleButton/>
 			</div>
 		);
 	}
