@@ -1,39 +1,28 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { connect, Provider } from 'react-redux';
 
-import { incrementCounter, decrementCounter, addCounter } from '../actions';
-import { CounterList } from './counter_list';
+//import { incrementCounter, decrementCounter, addCounter } from '../actions';
+//import CounterList from './counter_list';
+import Body from './Body';
 
-interface IAppState {
-	counters: number[];
-}
 
 interface IAppProps {
-	dispatch?: (func: any) => void;
-	counters?: number[];
+	store: any;
 }
 
-function select(state: { counters: number[] }): IAppState {
+function select(state, props) {
 	return {
-		counters: state.counters
+		name: state.name
 	};
 }
 
 @connect(select)
-export class App extends React.Component<IAppProps, {}> {
+class App extends React.Component<any, {}> {
 	public render(): React.ReactElement<{}> {
-		const { dispatch, counters }: any = this.props;
 
 		return (
-			<div>
-				<CounterList
-					counters={counters}
-					increment={(index: number) => dispatch(incrementCounter(index))}
-					decrement={(index: number) => dispatch(decrementCounter(index))}
-				/>
-
-				<button onClick={() => dispatch(addCounter())}>Add Counter</button>
-			</div>
+			<Body/>
 		);
 	}
 }
+export default App;

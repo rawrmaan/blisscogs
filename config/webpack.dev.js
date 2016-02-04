@@ -29,7 +29,7 @@ module.exports = {
         new webpack.NoErrorsPlugin()
     ],
     resolve: {
-        root: [path.resolve('../app')],
+        root: [path.resolve('../App')],
         extensions: ['', '.jsx', '.js', '.tsx', '.ts']
     }
 };

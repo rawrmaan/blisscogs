@@ -30,6 +30,7 @@ node_modules
 typings
 build
 .DS_Store
+_app
 
 # IDE specific
 .idea

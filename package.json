@@ -39,11 +39,13 @@
     "webpack-hot-middleware": "^2.6.4"
   },
   "dependencies": {
+    "lodash": "^4.2.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.1.2",
     "redux": "^3.1.5",
+    "redux-actions": "^0.9.1",
     "ts-loader": "^0.8.0",
-    "typescript": "^1.7.5"
+    "typescript": "1.7.5"
   }
 }

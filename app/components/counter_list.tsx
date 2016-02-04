@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Counter } from './counter';
+import Counter from './counter';
 
 interface ICounterListProps {
 	counters: number[];
@@ -8,7 +8,7 @@ interface ICounterListProps {
 	decrement: (index: number) => void;
 }
 
-export class CounterList extends React.Component<ICounterListProps, {}> {
+class CounterList extends React.Component<ICounterListProps, {}> {
 	public render(): React.ReactElement<{}> {
 		const {increment, decrement}: any = this.props;
 
@@ -26,3 +26,4 @@ export class CounterList extends React.Component<ICounterListProps, {}> {
 		</ul>);
 	}
 }
+export default CounterList;

@@ -9,7 +9,7 @@ interface ICounterProps {
 
 const COLORS: string[] = ['blue', 'green', 'red'];
 
-export class Counter extends React.Component<ICounterProps, {}> {
+class Counter extends React.Component<ICounterProps, {}> {
 	public render(): React.ReactElement<{}> {
 		const style: {} = {
 			color: COLORS[this.props.index % COLORS.length]
@@ -26,3 +26,4 @@ export class Counter extends React.Component<ICounterProps, {}> {
 		);
 	}
 }
+export default Counter;
