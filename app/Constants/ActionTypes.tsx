@@ -1,3 +1,3 @@
-export enum ACTIONTYPE {
-	Toggle,
-}
+export type ActionType = string;
+
+export const TOGGLE: ActionType = 'TOGGLE';

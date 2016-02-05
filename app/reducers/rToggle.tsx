@@ -1,4 +1,4 @@
-import { ACTIONTYPE } from '../Constants/ActionTypes';
+import { TOGGLE } from '../Constants/ActionTypes';
 
 interface IToggleState {
 	isToggled: boolean;
@@ -8,7 +8,7 @@ interface IToggleState {
 
 export const Toggle = (state = { isToggled: false }, action): IToggleState => {
 	switch (action.type) {
-		case ACTIONTYPE.Toggle:
+		case TOGGLE:
 			//TODO: USe es7 spread when available in typescript
 			//return {
 			//	...state,
