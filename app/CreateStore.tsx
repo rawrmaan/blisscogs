@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import Logger from './Middleware/Logger';
-import {Reducers} from './Reducers/root';
+import {Reducers} from 'reducers_/root';
 
 interface IHotModule {
 	hot?: { accept: (path: string, callback: () => void) => void };
@@ -21,7 +21,7 @@ export default function(data) {
 	if (module.hot) {
 		// Enable Webpack hot module replacement for reducers
 		module.hot.accept('./Reducers/root', () => {
-			const nextRootReducer = require('./Reducers/root').Reducers;
+			const nextRootReducer = require('./reducers_/root').Reducers;
 			store.replaceReducer(nextRootReducer);
 		});
 	}
