@@ -1,3 +1,3 @@
-export const enum ACTIONTYPE {
+export enum ACTIONTYPE {
 	Toggle,
 }
