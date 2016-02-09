@@ -2,13 +2,13 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import createStore from './CreateStore';
+import configureStore from './configureStore';
 import App from './Components/App';
 
 //Initialize app with start data
 const initialState = {};
 
-const store: any = createStore(initialState);
+const store: any = configureStore(initialState || {});
 
 class Main extends React.Component<{}, {}> {
 	public render(): React.ReactElement<Provider> {

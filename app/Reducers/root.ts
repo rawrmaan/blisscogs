@@ -1,6 +1,6 @@
-import { combineReducers, Reducer } from 'redux';
+import { combineReducers } from 'redux';
 import { Toggle } from './rToggle';
 
-export const Reducers: Reducer = combineReducers({
+export default combineReducers({
 	Toggle
 });

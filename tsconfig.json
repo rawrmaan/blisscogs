@@ -9,6 +9,8 @@
   "exclude": [
     "node_modules",
     "config",
-    "dev_server.js"
+    "dev_server.js",
+    "typings/browser.d.ts",
+    "typings/browser"
   ]
 }
