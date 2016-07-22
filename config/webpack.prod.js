@@ -7,11 +7,6 @@ module.exports = {
   devtool: 'source-map',
   entry: './app/index.tsx',
   module: {
-    preLoaders: [{
-      test: /\.tsx?$/,
-      loader: 'tslint',
-      include: APP_DIR
-    }],
     loaders: [{
       test: /\.tsx?$/,
       loaders: ['babel', 'ts'],
