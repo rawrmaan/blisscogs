@@ -3,7 +3,6 @@ const express = require('express');
 const webpack = require('webpack');
 const config = require('./config/webpack.dev');
 const request = require('request-promise')
-require('dotenv').config()
 
 const app = express();
 const compiler = webpack(config);
@@ -12,6 +11,8 @@ const port = process.env.PORT || 3000;
 const apiRoot = 'https://api.discogs.com'
 
 if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+
   app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath,
