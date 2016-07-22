@@ -20,12 +20,6 @@
     "url": "https://github.com/rawrmaan/blisscogs"
   },
   "devDependencies": {
-    "babel-core": "^6.4.5",
-    "babel-loader": "^6.2.1",
-    "babel-plugin-react-transform": "^2.0.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "babel-preset-stage-0": "^6.3.13",
     "react-transform-catch-errors": "^1.0.1",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
@@ -41,6 +35,12 @@
   "dependencies": {
     "autoprefixer-loader": "^3.2.0",
     "axios": "^0.13.1",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-react-transform": "^2.0.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
     "classnames": "^2.2.5",
     "css-loader": "^0.23.1",
     "dotenv": "^2.0.0",
