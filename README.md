@@ -1,5 +1,5 @@
 # Blisscogs for Discogs
-=======================================
+----------------------------------
 
 Organize your Discogs collection into shelves! Features:
 - Create shelves with your own custom names
@@ -14,14 +14,14 @@ Prerequisites
 * Typescript Typings Manager `npm install -g typings`
 
 Installation
---------------------------------------
+----------------------------------
 * npm install
 * tsd install
 
 Running the Dev Server
---------------------------------------
+----------------------------------
 After setting up the project, type `npm start` to start the Express dev server.
 
 Compiling for production
----------------------------------------
+----------------------------------
 To compile the Javascript bundle for production, use `npm run build`.
