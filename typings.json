@@ -7,7 +7,6 @@
     "react-dnd": "registry:dt/react-dnd#1.1.4+20160316155526",
     "react-dnd-html5-backend": "registry:dt/react-dnd-html5-backend#2.1.2+20160704104003",
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
-    "react-redux": "github:DefinitelyTyped/DefinitelyTyped/react-redux/react-redux.d.ts#a513c4df6eb8505da8eef432891c8b69b73535d9",
     "redux": "registry:dt/redux#3.5.2+20160703092728",
     "redux-logger": "registry:dt/redux-logger#2.6.0+20160619033847",
     "redux-promise-middleware": "registry:dt/redux-promise-middleware#0.0.0+20160108032528",

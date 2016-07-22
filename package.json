@@ -8,7 +8,7 @@
   },
   "scripts": {
     "postinstall": "NODE_ENV=production typings install && webpack --config config/webpack.prod.js",
-    "build": "npm run clean && npm run build:webpack",
+    "build": "npm run clean && npm run postinstall",
     "clean": "rimraf build",
     "start": "node dev_server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
