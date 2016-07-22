@@ -38,7 +38,7 @@ export const ReleasesSelector = createSelector(
       })
     }
 
-    releasesArray = _.sortBy(releasesArray, 'basic_information.artists[0].name')
+    releasesArray = _.sortBy(releasesArray, 'basic_information.title')
 
     return {
       currentShelf: shelvesState.currentShelf,
