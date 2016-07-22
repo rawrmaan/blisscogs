@@ -11,15 +11,18 @@ const port = process.env.PORT || 3000;
 
 const apiRoot = 'https://api.discogs.com'
 
-app.use(require('webpack-dev-middleware')(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath,
-  stats: {
-    exclude: ['node_modules']
-  }
-}));
+if (process.env.NODE_ENV !== 'production') {
+  app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath,
+    stats: {
+      exclude: ['node_modules']
+    }
+  }))
 
-app.use(require('webpack-hot-middleware')(compiler));
+  app.use(require('webpack-hot-middleware')(compiler))
+}
+
 app.use(express.static('static'))
 
 app.get('/api/releases/:page', (req, res) => {
