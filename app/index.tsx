@@ -5,15 +5,12 @@ import { Provider } from 'react-redux';
 import configureStore from './configureStore';
 import App from './Components/App';
 
-//Initialize app with start data
-const initialState = {};
-
-const store: any = configureStore(initialState || {});
+require('../css/index.less')
 
 class Main extends React.Component<{}, {}> {
 	public render(): React.ReactElement<Provider> {
 		return (
-			<Provider store={store}>
+			<Provider store={configureStore()}>
 				<App />
 			</Provider>
 		);

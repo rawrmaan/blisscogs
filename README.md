@@ -1,13 +1,17 @@
-Typescript + React + Redux + Webpack Boilerplate
+# Blisscogs for Discogs
 =======================================
 
-Original source: [keokilee](https://github.com/keokilee/react-typescript-boilerplate)
+Organize your Discogs collection into shelves! Features:
+- Create shelves with your own custom names
+- Drag and drop your releases into those shelves
+- Rename the shelves, delete them, or remove releases from them
+- No login required, app keeps your shelves saved between sessions
 
-Base project for setting up a frontend application using Typescript and React. Heavily based off of Dan Abramov's [React Transform Boilerplate](https://github.com/gaearon/react-transform-boilerplate).
+Live demo: http://blisscogs.herokuapp.com/
 
 Prerequisites
 ----------------------------------
-* Typescript Definition Manager (TSD) `npm install -g tsd`
+* Typescript Typings Manager `npm install -g typings`
 
 Installation
 --------------------------------------

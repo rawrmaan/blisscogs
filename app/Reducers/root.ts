@@ -1,6 +1,8 @@
-import { combineReducers } from 'redux';
-import { Toggle } from './rToggle';
+import { combineReducers } from 'redux'
+import { Releases } from './releases'
+import { Shelves } from './shelves'
 
 export default combineReducers({
-	Toggle
-});
+	Releases,
+  Shelves
+})

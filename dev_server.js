@@ -1,18 +1,55 @@
-var path = require('path');
-var express = require('express');
-var webpack = require('webpack');
-var config = require('./config/webpack.dev');
+const path = require('path');
+const express = require('express');
+const webpack = require('webpack');
+const config = require('./config/webpack.dev');
+const request = require('request-promise')
+require('dotenv').config()
 
-var app = express();
-var compiler = webpack(config);
-var port = process.env.PORT || 3000;
+const app = express();
+const compiler = webpack(config);
+const port = process.env.PORT || 3000;
+
+const apiRoot = 'https://api.discogs.com'
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
-  publicPath: config.output.publicPath
+  publicPath: config.output.publicPath,
+  stats: {
+    exclude: ['node_modules']
+  }
 }));
 
 app.use(require('webpack-hot-middleware')(compiler));
+app.use(express.static('static'))
+
+app.get('/api/releases/:page', (req, res) => {
+  const page = +req.params.page
+  const {DISCOGS_KEY, DISCOGS_SECRET} = process.env
+
+  request(
+    `${apiRoot}/users/blacklight/collection/folders/0/releases?per_page=100&page=${page}`,
+    {
+      json: true,
+      headers: {
+        'Authorization': `Discogs key=${DISCOGS_KEY}, secret=${DISCOGS_SECRET}`,
+        'User-Agent': 'Blisscogs/1.0 +http://blisscogs.herokuapp.com/'
+      }
+    }
+  ).then((response) => {
+    const releasesResponse = {
+      items: response.releases,
+      nextPage: null
+    }
+
+    if (page < response.pagination.pages) {
+      releasesResponse.nextPage = page + 1
+    }
+
+    res.send(releasesResponse)
+  }).catch((error) => {
+    res.error(error)
+  })
+})
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));

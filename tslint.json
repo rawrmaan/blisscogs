@@ -18,7 +18,7 @@
       false,
       "tabs"
     ],
-    "interface-name": true,
+    "interface-name": false,
     "jsdoc-format": true,
     "label-position": true,
     "label-undefined": true,
@@ -79,15 +79,9 @@
       "avoid-escape"
     ],
     "radix": true,
-    "semicolon": true,
+    "semicolon": false,
     "switch-default": true,
-    "trailing-comma": [
-      true,
-      {
-        "multiline": "always",
-        "singleline": "never"
-      }
-    ],
+    "trailing-comma": false,
     "triple-equals": [
       true,
       "allow-null-check"

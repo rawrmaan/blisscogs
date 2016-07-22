@@ -17,6 +17,9 @@ module.exports = {
             test: /\.tsx?$/,
             loaders: ['babel', 'ts'],
             include: APP_DIR
+        }, {
+            test: /\.less$/,
+            loader: 'style!css!autoprefixer!less'
         }]
     },
     output: {

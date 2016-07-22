@@ -1,0 +1,218 @@
+@nav-height: 60px;
+@left-pane-width: 240px;
+
+@blue: #00F2EA;
+@orange: #E8CE26;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#top-nav {
+  position: relative;
+  display: table;
+  height: @nav-height;
+  margin: 0;
+  padding: 0;
+  font-size: 1.4em;
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+  background: rgba(255, 255, 255, .94);
+  width: 100%;
+  z-index: 2;
+
+  #logo {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 0;
+
+    img {
+      width: 140px;
+    }
+  }
+}
+
+#left-pane, #right-pane {
+  position: absolute;
+  top: 0;
+}
+
+#left-pane {
+  padding-top: @nav-height;
+  bottom: 0;
+  left: 0;
+  width: @left-pane-width;
+  border-right: 1px solid #DDD;
+}
+
+#right-pane {
+  padding: @nav-height 8px 0 8px;
+  right: 0;
+  bottom: 0;
+  left: @left-pane-width;
+  text-align: center;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar { 
+    display: none; 
+  }
+}
+
+// Shelves
+
+@shelf-height: 44px;
+
+#shelves {
+  h6, .add {
+    text-align: center;
+    font-size: .9em;
+    padding: 15px 0;
+    margin: 0;
+  }
+
+  .add {
+    display: block;
+    color: @orange;
+    font-weight: 600;
+    transition: 200ms color linear;
+    text-decoration: none;
+
+    &:hover {
+      color: darken(#E8CE26, 10%);
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      background: #EEE;
+      height: @shelf-height;
+      line-height: @shelf-height;
+      margin-bottom: 2px;
+      list-style-type: none;
+      padding: 0 8px;
+      transition: background 200ms linear;
+
+      .shelf-item {
+        display: table;
+        width: 100%;
+
+        > div {
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        .actions {
+          width: 50px;
+          text-align: right;
+        }
+
+        .count {
+          color: #999;
+          font-size: .8em;
+        }
+      }
+
+      &.selected {
+        background: lighten(@orange, 15%);
+      }
+
+      &.over {
+        background: @blue;
+      }
+
+      &.droppable {
+        background: lighten(@blue, 35%);
+      }
+
+      &:hover {
+        background: #DDD;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      img {
+        width: 12px;
+        margin: 0px 6px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// Releases
+
+@release-size: 180px;
+
+#releases {
+  text-align: center;
+
+  .loading-wrapper {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 2000ms ease-in-out;
+
+    &.done {
+      max-height: 0px;
+      display: block;
+    }
+
+    .loading {
+      display: table;
+      margin: 15px auto 8px auto;
+      font-weight: 600;
+      font-size: 1.2em;
+
+      > div {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .release {
+    display: inline-block;
+    background: #FEFEFE;
+    cursor: move;
+    width: @release-size + 2px;
+    min-height: @release-size * 1.5;
+    margin: 8px;
+    text-align: left;
+    font-size: .8em;
+    line-height: 1.2;
+    overflow: hidden;
+
+    .preview-image {
+      width: @release-size;
+      height: @release-size;
+      border: 1px solid #CCC;
+      box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+      margin-bottom: 8px;
+      background-size: cover;
+    }
+
+    .title {
+      font-weight: 600;
+    }
+
+    .sub-meta {
+      font-size: .7rem;
+      color: #999;
+    }
+  }
+}

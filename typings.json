@@ -1,8 +1,24 @@
 {
-  "ambientDependencies": {
+  "globalDependencies": {
+    "axios": "registry:dt/axios#0.9.1+20160629101425",
+    "classnames": "registry:dt/classnames#0.0.0+20160316155526",
     "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#1c56e368e17bb28ca57577250624ca5bd561aa81",
-    "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#e3a7583dc379d3b178216fcd444b0ea64aed66e0",
-    "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#ca5bfe76d2d9bf6852cbc712d9f3e0047c93486e",
-    "react-redux": "github:DefinitelyTyped/DefinitelyTyped/react-redux/react-redux.d.ts#a513c4df6eb8505da8eef432891c8b69b73535d9"
+    "react": "registry:dt/react#0.14.0+20160720060442",
+    "react-dnd": "registry:dt/react-dnd#1.1.4+20160316155526",
+    "react-dnd-html5-backend": "registry:dt/react-dnd-html5-backend#2.1.2+20160704104003",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
+    "react-redux": "github:DefinitelyTyped/DefinitelyTyped/react-redux/react-redux.d.ts#a513c4df6eb8505da8eef432891c8b69b73535d9",
+    "redux": "registry:dt/redux#3.5.2+20160703092728",
+    "redux-logger": "registry:dt/redux-logger#2.6.0+20160619033847",
+    "redux-promise-middleware": "registry:dt/redux-promise-middleware#0.0.0+20160108032528",
+    "request-promise": "registry:dt/request-promise#3.0.0+20160628092802",
+    "reselect": "registry:dt/reselect#2.0.2+20160319031821"
+  },
+  "dependencies": {
+    "lodash": "registry:npm/lodash#4.0.0+20160701205107",
+    "react-redux": "registry:npm/react-redux#4.4.0+20160614222153",
+    "redux-storage": "registry:npm/redux-storage#4.0.0+20160310030142",
+    "redux-storage-engine-localstorage": "registry:npm/redux-storage-engine-localstorage#1.0.1+20160310030142",
+    "request": "registry:npm/request#2.69.0+20160428223725"
   }
 }

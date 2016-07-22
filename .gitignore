@@ -34,3 +34,6 @@ _app
 
 # IDE specific
 .idea
+
+
+.env

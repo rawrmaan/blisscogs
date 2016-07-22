@@ -1,7 +1,7 @@
 {
-  "name": "react-typescript-boilerplate",
+  "name": "Blisscogs",
   "version": "1.0.0",
-  "description": "Boilerplate project that uses Typescript, React, and Webpack",
+  "description": "Organize your Discogs selection into shelves",
   "main": "index.js",
   "scripts": {
     "build:webpack": "NODE_ENV=production webpack --config config/webpack.prod.js",
@@ -10,16 +10,12 @@
     "start": "node dev_server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "George Lee",
+  "author": "Arman Dezfuli-Arjomandi",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/keokilee/react-typescript-boilerplate.git"
+    "url": "https://github.com/rawrmaan/blisscogs"
   },
-  "bugs": {
-    "url": "https://github.com/keokilee/react-typescript-boilerplate/issues"
-  },
-  "homepage": "https://github.com/keokilee/react-typescript-boilerplate",
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
@@ -35,20 +31,37 @@
     "redux-devtools-dock-monitor": "^1.0.1",
     "redux-devtools-log-monitor": "^1.0.4",
     "rimraf": "^2.5.1",
-    "tslint": "^3.3.0",
+    "tslint": "^3.13.0",
     "tslint-loader": "^2.1.0",
     "webpack": "^1.12.12",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.6.4"
   },
   "dependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "axios": "^0.13.1",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.23.1",
+    "dotenv": "^2.0.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "lodash": "^4.2.0",
     "react": "^0.14.7",
+    "react-dnd": "^2.1.4",
+    "react-dnd-html5-backend": "^2.1.2",
     "react-dom": "^0.14.7",
     "react-redux": "^4.1.2",
     "redux": "^3.1.5",
     "redux-actions": "^0.9.1",
+    "redux-logger": "^2.6.1",
+    "redux-promise-middleware": "2.2.4",
+    "redux-storage": "^4.0.1",
+    "redux-storage-engine-localstorage": "^1.1.1",
+    "request": "^2.73.0",
+    "request-promise": "^4.0.2",
+    "reselect": "^2.5.3",
+    "style-loader": "^0.13.1",
     "ts-loader": "^0.8.0",
-    "typescript": "1.7.5"
+    "typescript": "1.8.10"
   }
 }
