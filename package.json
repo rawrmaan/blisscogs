@@ -35,7 +35,6 @@
     "rimraf": "^2.5.1",
     "tslint": "^3.13.0",
     "tslint-loader": "^2.1.0",
-    "webpack": "^1.12.12",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.6.4"
   },
@@ -65,6 +64,7 @@
     "reselect": "^2.5.3",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.0",
-    "typescript": "1.8.10"
+    "typescript": "1.8.10",
+    "webpack": "^1.12.12"
   }
 }
