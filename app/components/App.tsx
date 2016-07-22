@@ -18,6 +18,7 @@ interface AppProps extends ReleasesSelectorProps {
 class App extends React.Component<AppProps, {}> {
   constructor(props) {
     super(props)
+    
 
     this.removeItem = this.removeItem.bind(this)
   }
