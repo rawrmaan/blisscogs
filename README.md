@@ -15,8 +15,7 @@ Prerequisites
 
 Installation
 ----------------------------------
-* npm install
-* tsd install
+`npm install && typings install`
 
 Running the Dev Server
 ----------------------------------
