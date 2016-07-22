@@ -20,6 +20,13 @@ Installation
 
 Running the Dev Server
 ----------------------------------
+Add a file called `.env` and set your Discogs key and secret as follows:
+
+```
+DISCOGS_KEY=123abc
+DISCOGS_SECRET=456def
+```
+
 After setting up the project, type `npm start` to start the Express dev server.
 
 Compiling for production
